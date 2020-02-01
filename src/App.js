@@ -8,10 +8,6 @@ import './App.css';
 
 // This object will allow us to
 // easily convert numbers into US dollar values
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-});
 
 class App extends Component {
   state = {
@@ -45,6 +41,10 @@ updateFeature = (feature, newValue) => {
 };
 
   render() {
+    const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    });
 
     return (
       <div className="App">

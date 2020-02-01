@@ -2,10 +2,10 @@ import React from 'react';
 import slugify from 'slugify';
 
 function Part(props) {
-    const feature = this.props.feature;
-    const idx = this.props.idx;
+    const feature = props.feature;
+    const idx = props.idx;
     const featureHash = feature + '-' + idx;
-      const options = this.props.features[feature].map(item => {
+      const options = props.features[feature].map(item => {
         const itemHash = slugify(JSON.stringify(item));
         return (
           <div key={itemHash} className="feature__item">
@@ -14,11 +14,11 @@ function Part(props) {
               id={itemHash}
               className="feature__option"
               name={slugify(feature)}
-              checked={item.name === this.props.state.selected[feature].name}
-              onChange={e => this.prop.updateFeature(feature, item)}
+              checked={item.name === props.state.selected[feature].name}
+              onChange={e => props.updateFeature(feature, item)}
             />
             <label htmlFor={itemHash} className="feature__label">
-              {item.name} ({this.USD.format(item.cost)})
+              {item.name} ({props.USD.format(item.cost)})
             </label>
           </div>
         );
@@ -27,7 +27,7 @@ function Part(props) {
     return (
         <fieldset className="feature" key={featureHash}>
         <legend className="feature__name">
-            <h3>{this.props.feature}</h3>
+            <h3>{props.feature}</h3>
         </legend>
             {options}
         </fieldset>

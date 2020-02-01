@@ -6,11 +6,11 @@ function Cart(props) {
     return (
         <section className="main__summary">
             <h2>Your cart</h2>
-            <Summary USD={this.props.USD} state={this.props.state}/>
+            <Summary USD={props.USD} state={props.state}/>
             <div className="summary__total">
               <div className="summary__total__label">Total</div>
               <div className="summary__total__value">
-                {this.props.USD.format(<Total state={this.props.state}/>)}
+                {props.USD.format(<Total state={props.state}/>)}
               </div>
             </div>
           </section>

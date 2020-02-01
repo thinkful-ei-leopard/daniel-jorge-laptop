@@ -1,8 +1,8 @@
 import React from 'react';
 
 function Total (props) {
-    return ( Object.keys(this.props.state.selected).reduce(
-    (acc, curr) => acc + this.props.state.selected[curr].cost,
+    return ( Object.keys(props.state.selected).reduce(
+    (acc, curr) => acc + props.state.selected[curr].cost,
     0
   ))
 }

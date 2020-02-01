@@ -10,5 +10,3 @@ export default class Customize extends React.Component {
     return features;
 };
 }
-
-p
