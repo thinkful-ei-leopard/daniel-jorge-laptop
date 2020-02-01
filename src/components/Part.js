@@ -24,18 +24,6 @@ function Part(props) {
         );
       });
 
-<<<<<<< HEAD
-      return (
-          <fieldset className="feature" key={featureHash}>
-          <legend className="feature__name">
-              <h3>{this.props.feature}</h3>
-           </legend>
-          {options}
-          </fieldset>
-      );
-  }
-  
-=======
     return (
         <fieldset className="feature" key={featureHash}>
         <legend className="feature__name">
@@ -45,6 +33,5 @@ function Part(props) {
         </fieldset>
       );
     }
->>>>>>> 14bd92b8a3638e8a815f4a1ba800659cb708488e
 
 export default Part;
