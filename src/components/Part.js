@@ -18,12 +18,13 @@ function Part(props) {
               onChange={e => this.prop.updateFeature(feature, item)}
             />
             <label htmlFor={itemHash} className="feature__label">
-              {item.name} ({USCurrencyFormat.format(item.cost)})
+              {item.name} ({this.USD.format(item.cost)})
             </label>
           </div>
         );
       });
 
+<<<<<<< HEAD
       return (
           <fieldset className="feature" key={featureHash}>
           <legend className="feature__name">
@@ -34,5 +35,16 @@ function Part(props) {
       );
   }
   
+=======
+    return (
+        <fieldset className="feature" key={featureHash}>
+        <legend className="feature__name">
+            <h3>{this.props.feature}</h3>
+        </legend>
+            {options}
+        </fieldset>
+      );
+    }
+>>>>>>> 14bd92b8a3638e8a815f4a1ba800659cb708488e
 
 export default Part;
