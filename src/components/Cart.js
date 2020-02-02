@@ -1,6 +1,12 @@
 import React from 'react';
 import Summary from './Summary';
-import Total from './Total';
+
+function Total (props) {
+  return ( Object.keys(props.state.selected).reduce(
+  (acc, curr) => acc + props.state.selected[curr].cost,
+  0
+))
+}
 
 function Cart(props) {
     return (
@@ -10,7 +16,7 @@ function Cart(props) {
             <div className="summary__total">
               <div className="summary__total__label">Total</div>
               <div className="summary__total__value">
-                {props.USD.format(<Total state={props.state}/>)}
+                {props.USD.format(Total(props))}
               </div>
             </div>
           </section>

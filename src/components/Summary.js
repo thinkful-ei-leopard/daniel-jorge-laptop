@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Summary (props) {
-    Object.keys(props.state.selected).map((feature, idx) => {
+    return Object.keys(props.state.selected).map((feature, idx) => {
         const featureHash = feature + '-' + idx;
         const selectedOption = props.state.selected[feature];
     
